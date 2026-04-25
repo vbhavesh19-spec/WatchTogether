@@ -733,7 +733,7 @@ function buildWhy(m,persons){
 ════════════════════════════════════════════════════ */
 const MOODS=["","Happy & Lighthearted","Romantic","Sad / Emotional","Thrilled / Tense","Adventurous","Scared / Horror","Nostalgic","Inspired","Relaxed / Cozy","Laugh-out-loud Funny","Mind-bending","Action-pumped"];
 const GENRES_UI=["","Action","Adventure","Animation","Biographical","Comedy","Crime","Documentary","Drama","Fantasy","Historical","Horror","Musical","Mystery","Romance","Sci-Fi","Superhero","Thriller","War","Western"];
-const TYPES=["","Movie","Series","Either"];
+const TYPES=["","Movie","Series"];
 const ORDINALS=["","I","II","III","IV","V","VI","VII"];
 let pc=0;
 
@@ -760,7 +760,7 @@ function addPerson(defaultName=""){
       </div>
       <div class="field">
         <label>Movie or Series?</label>
-        <select data-f="type">${TYPES.map(t=>`<option value="${t}">${t||"Either"}</option>`).join("")}</select>
+        <select data-f="type">${TYPES.map(t=>`<option value="${t}">${t||"— no preference —"}</option>`).join("")}</select>
       </div>
       <div class="field">
         <label>Genre</label>
